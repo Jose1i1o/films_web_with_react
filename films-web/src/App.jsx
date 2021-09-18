@@ -1,15 +1,30 @@
-import { MoviesGrid } from "./MoviesGrid";
-import styles from "./App.module.css";
+import { MoviesGrid } from "./components/MoviesGrid";
+import styles from "./components/App.module.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { MovieDetails } from "./pages/MovieDetails";
+import { LandingPage } from "./pages/LandingPage";
 
 export function App() {
   return (
-    <div>
+    <Router>
       <header>
-        <h1 className={styles.title}>Netflix v.2.0</h1>
+        <Link to="/">
+          <h1 className={styles.title}>Netflix v.2.0</h1>
+        </Link>
+        <Link to="/">Home</Link>
+        <br />
+        <Link to="/movie">Films</Link>
       </header>
       <main>
-        <MoviesGrid />
+        <Switch>
+          <Route exact path="/movie/:movieId">
+            <MovieDetails />
+          </Route>
+          <Route path="/">
+            <LandingPage />
+          </Route>
+        </Switch>
       </main>
-    </div>
+    </Router>
   );
 }
