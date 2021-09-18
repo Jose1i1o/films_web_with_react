@@ -10,14 +10,15 @@ export function App() {
       <header>
         <Link to="/">
           <h1 className={styles.title}>Netflix v.2.0</h1>
-        </Link>
+          {/* </Link>
         <Link to="/">Home</Link>
         <br />
-        <Link to="/movie">Films</Link>
+        <Link to="/movie">Films</Link> */}
+        </Link>
       </header>
       <main>
         <Switch>
-          <Route exact path="/movie/:movieId">
+          <Route exact path="/movies/:movieId">
             <MovieDetails />
           </Route>
           <Route path="/">

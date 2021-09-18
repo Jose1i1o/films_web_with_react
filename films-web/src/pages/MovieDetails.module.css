@@ -1,0 +1,27 @@
+.detailsContainer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-wrap: wrap;
+}
+
+.container__title {
+  font-weight: bold;
+}
+
+.container__image {
+  border-radius: 0.5rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+}
+
+.col {
+  max-width: 400px;
+  margin: 2rem;
+  max-height: auto;
+}
+
+.firstitem {
+  margin-top: 0rem;
+  padding-top: 0rem;
+}
